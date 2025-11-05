@@ -33,11 +33,13 @@ Halaman pemesanan digunakan untuk mengisi data pemesan dan buku yang akan dibeli
 
 ![gambar5](ss5.png)
 
+![gambar6](ss6.png)
+
 Halaman tracking berfungsi untuk menampilkan status pengiriman pesanan berdasarkan nomor Delivery Order (DO) yang dimasukkan oleh pengguna. Setelah pengguna menginput nomor DO dan menekan tombol “Cari”, sistem akan menampilkan informasi seperti nama pemesan, status pengiriman, detail ekspedisi, tanggal kirim, jenis paket, dan total pembayaran. Status pengiriman divisualisasikan menggunakan elemen progress bar untuk menunjukkan sejauh mana proses pengiriman berjalan. Halaman ini menunjukkan kemampuan JavaScript dalam menampilkan data bersyarat dan memberikan pengalaman interaktif kepada pengguna.
 
 
 ## Halaman History
 
-![gambar5](ss6.png)
+![gambar5](ss7.png)
 
 Halaman history menampilkan riwayat transaksi pemesanan yang telah dilakukan oleh pengguna. Data pada halaman ini bisa diambil dari array simulasi atau disimpan sementara menggunakan localStorage sebagai penyimpanan sisi klien. Tujuannya adalah memberikan gambaran kepada pengguna mengenai pesanan yang telah dilakukan sebelumnya, seperti judul buku, jumlah, harga, dan tanggal transaksi. Tampilan halaman history dibuat menyerupai tabel laporan sederhana agar mudah dibaca dan diakses, sekaligus melengkapi alur sistem toko buku dari login hingga pelacakan transaksi.
