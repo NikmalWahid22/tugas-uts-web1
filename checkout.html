@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Buku</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="checkout-page" onload="tampilkanPesanan()">
+
+  <header class="dashboard-header">
+    <h1>Halaman Pemesanan Buku</h1>
+  </header>
+
+  <main class="dashboard-main">
+    <section>
+      <h2>Daftar Pemesanan</h2>
+      <table border="1" cellpadding="10" cellspacing="0" id="tabelPesanan">
+        <thead>
+          <tr>
+            <th>Kode Buku</th>
+            <th>Nama Buku</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="isiPesanan"></tbody>
+      </table>
+
+      <h3 id="totalAkhir">Total: Rp 0</h3>
+
+      <div class="form-tambah">
+        <h3>Tambah Buku ke Pesanan</h3>
+        <input type="text" id="kodeBuku" placeholder="Kode Buku">
+        <input type="text" id="namaBuku" placeholder="Nama Buku">
+        <input type="number" id="hargaBuku" placeholder="Harga">
+        <input type="number" id="jumlahBuku" placeholder="Jumlah">
+        <button onclick="tambahPesanan()">Tambah</button>
+      </div>
+    </section>
+
+    <hr>
+
+    <section style="margin-top:30px;">
+      <h2>Informasi Pemesan & Pembayaran</h2>
+      <form onsubmit="return konfirmasiPesanan()">
+        <input type="text" id="namaPemesan" placeholder="Nama Lengkap" required><br>
+        <input type="email" id="emailPemesan" placeholder="Alamat Email" required><br>
+        <input type="text" id="alamatPemesan" placeholder="Alamat Lengkap" required><br>
+        <select id="metodeBayar" required>
+          <option value="">-- Pilih Metode Pembayaran --</option>
+          <option value="Transfer Bank">Transfer Bank</option>
+          <option value="E-Wallet">E-Wallet (Dana, OVO, Gopay)</option>
+          <option value="COD">COD (Bayar di Tempat)</option>
+        </select><br><br>
+        <button type="submit">Konfirmasi Pesanan</button>
+      </form>
+    </section>
+  </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

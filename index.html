@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Buku</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <form onsubmit="return login()">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Masukkan email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Masukkan password" required>
+      </div>
+
+      <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <p style="margin-top: 10px;">
+      <a href="#" onclick="bukaDaftar()">Daftar Akun Baru</a> |
+      <a href="#" onclick="bukaLupaPassword()">Lupa Password?</a>
+    </p>
+  </div>
+
+  <!-- Modal Daftar -->
+  <div id="modalDaftar" class="modal">
+    <div class="modal-content">
+      <h3>Daftar Akun Baru</h3>
+      <input type="text" id="namaDaftar" placeholder="Nama lengkap">
+      <input type="email" id="emailDaftar" placeholder="Email">
+      <input type="password" id="passwordDaftar" placeholder="Password">
+      <button onclick="daftarAkun()">Daftar</button>
+      <button class="close" onclick="tutupModal('modalDaftar')">Batal</button>
+    </div>
+  </div>
+
+  <!-- Modal Lupa Password -->
+  <div id="modalLupa" class="modal">
+    <div class="modal-content">
+      <h3>Lupa Password</h3>
+      <input type="email" id="emailLupa" placeholder="Masukkan email terdaftar">
+      <button onclick="resetPassword()">Kirim</button>
+      <button class="close" onclick="tutupModal('modalLupa')">Batal</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
